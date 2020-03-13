@@ -1,0 +1,2452 @@
+/*Author: Sara Tabitha
+Date: 4/2017
+Description: this file contains all of the styling for the virtual tour organized by no media query to web & mobile
+media queries */
+
+/**/
+/*START SHARED STYLING (REGARDLESS OF WINDOW WIDTH)*/
+/**/
+
+
+/*for all of the elements that change visibility on click*/
+/*.invisible{
+  visibility: hidden;
+}*/
+/* !important is <lol>important</lol> to overwrite hidden*/
+#menuDrawer {
+  z-index: 99;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.mdl-layout__header-row.drawer {
+  padding: 0px 0px 0px 20px;
+  width: 100%;
+  height: 30px;
+}
+
+#searchResults>ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.firstResults>h6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+#noResults {
+  font-style: italic;
+}
+
+.results {
+  color: black;
+  text-decoration: underline;
+}
+
+.results>p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.mdl-textfield {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px 10px;
+}
+
+/*grey coloring*/
+.background666 {
+  background-color: #666766;
+}
+
+.color666 {
+  color: #666766;
+}
+
+a.link {
+  color: rgb(33, 150, 243);
+}
+
+/*all layout titles*/
+.mdl-layout-title {
+  font-size: 16px;
+
+}
+
+/*class for styling all text*/
+.text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*360 grey styling*/
+.mdl-layout-title.threeSixty {
+  color: #d0cece;
+}
+
+/*all checkbox lines*/
+.mdl-checkbox__label {
+  font-size: 16px;
+}
+
+/*grey for select all checkbox lines*/
+.mdl-checkbox__label.selectAll {
+  color: #d0cece;
+}
+
+.options {
+  padding: 0px;
+  list-style: none;
+  margin: 0;
+}
+
+.options>li {
+  padding-left: 20px;
+}
+
+/*icons*/
+.material-icons {
+  position: relative;
+  top: 4px;
+  padding-right: 4px;
+}
+
+/*janky changing the background colors of the checkbox*/
+.mdl-checkbox__focus-helper {
+  background-color: #FFF;
+  color: #FFF;
+}
+
+.mdl-checkbox__box-outline {
+  border: 2px solid #666766;
+}
+
+/* checkbox color changes to match their marker colors */
+/* .is-checked (!!!) very important to add to selector otherwise the checkbox will always look checked */
+
+/* selectAll */
+/* border outline */
+#selectAllOne.is-checked>span.mdl-checkbox__box-outline {
+  border: #d0cece;
+}
+
+/* checkbox inner color */
+#selectAllOne.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #d0cece;
+}
+
+/* checkbox ripple effect color */
+#selectAllOne>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #d0cece;
+}
+
+/* buildings */
+/* border outline */
+#buildingsLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #fccd32;
+}
+
+/* checkbox inner color */
+#buildingsLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #fccd32;
+}
+
+/* checkbox ripple effect color */
+#buildingsLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #fccd32;
+}
+
+/* parking */
+/* border outline */
+#parkingLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #ef92ac;
+}
+
+/* checkbox inner color */
+#parkingLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #ef92ac;
+}
+
+/* checkbox ripple effect color */
+#parkingLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #ef92ac;
+}
+
+/* accEnt */
+/* border outline */
+#accEntLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #eb212e;
+}
+
+/* checkbox inner color */
+#accEntLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #eb212e;
+}
+
+/* checkbox ripple effect color */
+#accEntLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #eb212e;
+}
+
+/* accPar */
+/* border outline */
+#accParLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #00a9a2;
+}
+
+/* checkbox inner color */
+#accParLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #00a9a2;
+}
+
+/* checkbox ripple effect color */
+#accParLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #00a9a2;
+}
+
+/* emergency phones */
+/* border outline */
+#emergencyLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #0085c8;
+}
+
+/* checkbox inner color */
+#emergencyLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #0085c8;
+}
+
+/* checkbox ripple effect color */
+#emergencyLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #0085c8;
+}
+
+/* sust */
+/* border outline */
+#sustLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #b3d143;
+}
+
+/* checkbox inner color */
+#sustLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #b3d143;
+}
+
+/* checkbox ripple effect color */
+#sustLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #b3d143;
+}
+
+/* gender */
+/* border outline */
+#genderLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #c1a3cb;
+}
+
+/* checkbox inner color */
+#genderLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #c1a3cb;
+}
+
+/* checkbox ripple effect color */
+#genderLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #c1a3cb;
+}
+
+/* selectAllTwo */
+/* border outline */
+#selectAllTwo.is-checked>span.mdl-checkbox__box-outline {
+  border: #d0cece;
+}
+
+/* checkbox inner color */
+#selectAllTwo.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #d0cece;
+}
+
+/* checkbox ripple effect color */
+#selectAllTwo>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #d0cece;
+}
+
+/* accaF */
+/* border outline */
+#accaFLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #981d23;
+}
+
+/* checkbox inner color */
+#accaFLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #981d23;
+}
+
+/* checkbox ripple effect color */
+#accaFLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #981d23;
+}
+
+/* ath */
+/* border outline */
+#athLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #f17844;
+}
+
+/* checkbox inner color */
+#athLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #f17844;
+}
+
+/* checkbox ripple effect color */
+#athLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #f17844;
+}
+
+/* accS */
+/* border outline */
+#accSLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #875547;
+}
+
+/* checkbox inner color */
+#accSLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #875547;
+}
+
+/* checkbox ripple effect color */
+#accSLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #875547;
+}
+
+/* campS */
+/* border outline */
+#campSLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #0e5846;
+}
+
+/* checkbox inner color */
+#campSLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #0e5846;
+}
+
+/* checkbox ripple effect color */
+#campSLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #0e5846;
+}
+
+/* resH */
+/* border outline */
+#resHLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #8dd4e2;
+}
+
+/* checkbox inner color */
+#resHLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #8dd4e2;
+}
+
+/* checkbox ripple effect color */
+#resHLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #8dd4e2;
+}
+
+/* dining */
+/* border outline */
+#diningLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #282a72;
+}
+
+/* checkbox inner color */
+#diningLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #282a72;
+}
+
+/* checkbox ripple effect color */
+#diningLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #282a72;
+}
+
+/* stuR */
+/* border outline */
+#stuRLabel.is-checked>span.mdl-checkbox__box-outline {
+  border: #5f318f;
+}
+
+/* checkbox inner color */
+#stuRLabel.is-checked>span.mdl-checkbox__box-outline>span {
+  background: #5f318f;
+}
+
+/* checkbox ripple effect color */
+#stuRLabel>span.mdl-checkbox__ripple-container.mdl-js-ripple-effect.mdl-ripple--center>span {
+  background: #5f318f;
+}
+
+/*repositioning the text for the checkbox lines*/
+span.check {
+  position: relative;
+  bottom: 6px;
+}
+
+/*changing lists to hide overflow*/
+ul {
+  display: block;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+li {
+  padding: 4px;
+  padding-left: 0px;
+  list-style-position: inside;
+  overflow: hidden;
+}
+
+/*360 tour lists styling*/
+ul.noPad {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+li.tourItem {
+  border-bottom: 1px solid grey;
+  text-align: center;
+  color: #a2a1a2;
+}
+
+li.tourItem:hover {
+  background-color: #d0cece;
+}
+
+span.mdl-navigation__link {
+  border-bottom: 1px solid grey;
+}
+
+span.mdl-navigation__link.color666.text {
+  color: #666766;
+}
+
+/*hide list items for 360 tour*/
+.tourDrop {
+  display: none;
+}
+
+/*forcing no padding on navigation*/
+.mdl-navigation.mine {
+  padding: 0px;
+}
+
+.mdl-navigation.mine:hover {
+  background-color: #a2a1a2;
+}
+
+.optionsBox {
+  padding: 6px 0px;
+
+}
+
+/*positioning of + symbols for 360 navigation*/
+i.add {
+  position: relative;
+  float: right;
+  top: -24px;
+
+}
+
+.remove {
+  visibility: hidden;
+}
+
+.linkText {
+  position: relative;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.linkSpan {
+  height: 30px !important;
+}
+
+.demo-card-wide {
+  position: absolute;
+  height: 100%;
+  /*display: none;*/
+  /*z-index: 1;*/
+}
+
+/*map styling*/
+html,
+body,
+main,
+.mdl-layout__content,
+.page-content,
+#map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#map {
+  position: relative;
+}
+
+h1.headHover {
+  position: relative;
+  display: block;
+  margin: 0px;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+p.paraHover {
+  position: relative;
+  display: block;
+  margin: 0px;
+}
+
+/* parking hover styling*/
+.parkingHover {
+  width: 100px;
+}
+
+h1.parkingHeadHover {
+  font-weight: 900;
+  text-decoration: underline;
+  margin: 0px;
+}
+
+p.parkingTextHover {
+  font-size: 12px;
+  margin: 0px;
+}
+
+.parkingColorStaff {
+  height: 10px;
+  width: 10px;
+  /* staff blue */
+  background-color: #324597;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorRemote {
+  height: 10px;
+  width: 10px;
+  /* remote orange*/
+  background-color: #f17e21;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorCommute {
+  height: 10px;
+  width: 10px;
+  /* remote yellow*/
+  background-color: #fbe200;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorRestricted {
+  height: 10px;
+  width: 10px;
+  /* remote grey*/
+  background-color: #9e9fa2;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorReserved {
+  height: 10px;
+  width: 10px;
+  /* remote pink*/
+  background-color: #f298bf;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorCommuter {
+  height: 10px;
+  width: 10px;
+  /* commuter red*/
+  background-color: #ec2024;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorResident {
+  height: 10px;
+  width: 10px;
+  /* resident green*/
+  background-color: #6fbd46;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+.parkingColorVisitor {
+  height: 10px;
+  width: 10px;
+  /* visitor peach*/
+  background-color: #ffdc9d;
+  border-radius: 100px;
+  /* display: inline-block; */
+  position: relative;
+  float: right;
+}
+
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popupBlack {
+  background-color: #fdb515;
+  position: relative;
+  min-height: 100px;
+}
+
+.popupNav {
+  background-color: #ffcc00;
+  position: relative;
+  top: -10px;
+  height: 30px;
+}
+
+ul#popupNav {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul#popupNav li {
+  position: relative;
+  display: inline;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2em;
+}
+
+ul#popupNav li:hover {
+  text-decoration: underline;
+}
+
+#vrCloseButton {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.heading {
+  margin: 0px;
+  font-family: "open-sans", sans-serif;
+
+}
+
+.imagePopup img {
+  width: 400px;
+  height: 250px;
+}
+
+.videoPopup iframe {
+  width: 400px;
+  height: 250px;
+}
+
+.sustHeading {
+  margin: 0px;
+  font-family: "open-sans", sans-serif;
+  position: relative;
+}
+
+#reeveDiningText p {
+  margin-bottom: 4px;
+}
+
+#reeveDiningImage ul {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+#reeveDiningImage li {
+  position: relative;
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 1em;
+
+}
+
+#reeveDiningImage a {
+  text-decoration-line: none;
+}
+
+#reeveDiningImage a:hover {
+  text-decoration-line: underline;
+}
+
+#blackhawkDiningText ul {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+#blackhawkDiningText li {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 20px;
+  text-indent: -15px;
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+#blackhawkDiningText p {
+  margin: 0px;
+  padding: 0px;
+}
+
+#albeeTourVideo {
+  display: none;
+}
+
+#albeeTourText {
+  display: none;
+}
+
+#albeeSustainability {
+  display: none;
+}
+
+#alumniSustainability {
+  display: none;
+}
+
+#acBathrooms {
+  display: none;
+}
+
+#blackhawkSustainability {
+  display: none;
+}
+
+#blackhawkBathrooms {
+  display: none;
+}
+
+#blackhawkDiningImage {
+  display: none;
+}
+
+#blackhawkDiningText {
+  display: none;
+}
+
+#clowDiningImage {
+  display: none;
+}
+
+#clowDiningText {
+  display: none;
+}
+
+#equityBathrooms {
+  display: none;
+}
+
+#dempseyBathrooms {
+  display: none;
+}
+
+#halseyBathrooms {
+  display: none;
+}
+
+#halseyDiningImage {
+  display: none;
+}
+
+#halseyDiningText {
+  display: none;
+}
+
+#harringtonBathrooms {
+  display: none;
+}
+
+#heatingSustainability {
+  display: none;
+}
+
+#parkingRampParkingImage {
+  display: none;
+}
+
+#parkingRampParkingText {
+  display: none;
+}
+
+#horizonSustainability {
+  display: none;
+}
+
+#kolfBathrooms {
+  display: none;
+}
+
+#multiculturalBathrooms {
+  display: none;
+}
+
+#nursingBathrooms {
+  display: none;
+}
+
+#polkTourText {
+  display: none;
+}
+
+#polkTourVideo {
+  display: none;
+}
+
+#reeveTourText {
+  display: none;
+}
+
+#reeveTourVideo {
+  display: none;
+}
+
+#reeveSustainability {
+  display: none;
+}
+
+#reeveBathrooms {
+  display: none;
+}
+
+#reeveDiningImage {
+  display: none;
+}
+
+#reeveDiningText {
+  display: none;
+}
+
+#sageTourText {
+  display: none;
+}
+
+#sageTourVideo {
+  display: none;
+}
+
+#sageSustainability {
+  display: none;
+}
+
+#sageBathrooms {
+  display: none;
+}
+
+#sageDiningImage {
+  display: none;
+}
+
+#sageDiningText {
+  display: none;
+}
+
+#scottDiningImage {
+  display: none;
+}
+
+#scottDiningText {
+  display: none;
+}
+
+#recreationSustainability {
+  display: none;
+}
+
+#recreationBathrooms {
+  display: none;
+}
+
+#successTourText {
+  display: none;
+}
+
+#successTourVideo {
+  display: none;
+}
+
+#successSustainability {
+  display: none;
+}
+
+#successBathrooms {
+  display: none;
+}
+
+#swartBathrooms {
+  display: none;
+}
+
+#taylorSustainability {
+  display: none;
+}
+
+#titanSustainability {
+  display: none;
+}
+
+#policeBathrooms {
+  display: none;
+}
+
+
+
+
+/**/
+/*END OF SHARED STYLING*/
+/**/
+
+/**/
+/*START WEB STYLING*/
+/**/
+@media screen and (min-width: 1025px) {
+
+  #mobileHeader {
+    height: 110px;
+    background-color: #ffcc00;
+  }
+
+  #searchResults {
+    height: 100%;
+    z-index: 10;
+    width: 374px;
+    margin: 0px;
+    background-color: #ffcc00;
+    padding: 0px;
+    left: -10px;
+    position: relative;
+    visibility: hidden;
+  }
+
+  #searchResults>ul {
+    padding-left: 40px;
+  }
+
+  /*hide menu button used only in mobile*/
+  #notif {
+    display: none;
+  }
+
+  #drawerContents {
+    height: 900px;
+
+  }
+
+  /*pullout card under menu*/
+  .demo-card-wide {
+    width: 377px;
+    /*curve for slide out/in*/
+    transition: left .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+
+  }
+
+  .cardOpen {
+    /*-webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;*/
+    left: 377px !important;
+    z-index: 10 !important;
+  }
+
+  .cardClosed {
+    z-index: 0;
+    left: -377px;
+  }
+
+  .cardCloseButton {
+    right: -90%;
+  }
+
+  #map {
+    height: 100%;
+  }
+
+  /*moves the google logo n' stuff into view on the map*/
+  #map>div>div>div:nth-child(2) {
+    margin-left: 385px !important;
+  }
+
+  #map>div>div>div:nth-child(10) {
+    left: 385px !important;
+  }
+
+  /*street view back arrow*/
+  #map>div>div:nth-child(2)>div:nth-child(9) {
+    left: 379px !important;
+  }
+
+  /*street view description of location*/
+  #map>div>div:nth-child(2)>div:nth-child(10) {
+    left: 405px !important;
+  }
+
+  /*hover for markers*/
+  .generalHover {
+    height: 105px;
+    width: 248px;
+  }
+
+  .imageHover {
+    width: 70px;
+    height: 105px;
+    /* display: inline-block; */
+    float: left;
+  }
+
+  .hoverDiv {
+    /*display: inline-block;*/
+    height: 100px;
+    width: 170px;
+    float: right;
+    padding: 4px;
+
+  }
+
+  h1.headHover {
+    font-size: 14px;
+  }
+
+  p.paraHover {
+
+    font-size: 12px;
+    width: 155px;
+
+  }
+
+  h1.parkingHeadHover {
+    font-size: 10px;
+    color: black;
+  }
+
+  .parkingColorStaff {
+    top: -10px;
+  }
+
+  .parkingColorRemote {
+    top: -10px;
+  }
+
+  .parkingColorCommute {
+    top: -10px;
+  }
+
+  .parkingColorRestricted {
+    top: -10px;
+  }
+
+  .parkingColorReserved {
+    top: -10px;
+  }
+
+  .parkingColorCommuter {
+    top: -10px;
+  }
+
+  .parkingColorResident {
+    top: -10px;
+  }
+
+  .parkingColorVisitor {
+    top: -10px;
+  }
+
+  /*styling google vr*/
+  .vr {
+    height: 500px;
+
+  }
+
+  .vrDiv {
+    display: none;
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    top: 45%;
+    margin-top: -173.5px;
+    height: 500px;
+    width: calc(100% - 377px);
+    left: 377px;
+  }
+
+  .popup {
+    position: fixed;
+    left: 40%;
+    top: 20%;
+    width: 715px;
+    height: 420px;
+    color: white;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+
+  .popupBlack {
+
+    left: -10px;
+    top: -10px;
+    width: 735px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  h1.text.yellow {
+    position: relative;
+    top: 40px;
+    left: 10px;
+    font-size: 2em;
+  }
+
+  .popupNav {
+    left: -10px;
+    width: 735px;
+  }
+
+  ul#popupNav li {
+    padding-left: 20px;
+  }
+
+  ul#popupNav li.about {
+    padding-left: 10px;
+  }
+
+  #vrCloseButton {
+    color: white;
+    font-size: 30px;
+    left: 95%;
+    height: 10px;
+    width: 10px;
+    margin: 10px;
+    text-align: center;
+    top: 19%;
+  }
+
+  .heading {
+    color: black;
+  }
+
+  .imagePopup {
+    float: left;
+  }
+
+  .videoPopup {
+    float: right;
+  }
+
+  .address {
+    text-align: center;
+    margin: 0px;
+    color: black;
+  }
+
+  .tourText {
+    width: 300px;
+    float: left;
+  }
+
+  .sustHeading {
+    color: black;
+  }
+
+  .subText {
+    position: relative;
+    padding-top: 10px;
+    color: black;
+    margin-bottom: 0px;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  /*yellow portion of header*/
+  .mdl-layout__header-row.main {
+    height: 109px;
+    border-top: 5px solid white;
+    padding: 0px 0px 20px 0px;
+    margin: 0;
+  }
+
+
+  .mdl-layout__drawer {
+    width: 380px;
+
+  }
+
+  #drawerDivTwo {
+    overflow-x: hidden;
+  }
+
+  /*styling for search*/
+  #webSearch {
+    height: 30px;
+    margin: 0px;
+
+  }
+
+  #menuDrawer {
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+
+  #webSearch {
+    background-color: #ffcc00;
+  }
+
+  #searchInput {
+    width: 200px;
+  }
+
+  .searchLabel.mdl-button.mdl-js-button.mdl-button--icon {
+    top: 0px;
+    bottom: 0px;
+    left: 10px;
+    right: 0px;
+    padding: 0px;
+  }
+
+  /*uwo watermark picture*/
+  #watermark {
+    height: 109px;
+    width: 223px;
+    padding-top: 10px;
+  }
+
+
+
+  #twentythreeHover {
+    width: 130px;
+  }
+
+  #sevenHover {
+    width: 115px;
+  }
+
+  #titanOneHover,
+  #titanTwoHover,
+  #womensCenterHover {
+    width: 145px;
+  }
+
+  #pollockPopup {
+    height: 380px;
+  }
+
+  #donnerPopup {
+    height: 400px;
+  }
+
+  #fletcherPopup,
+  #oviattPopup {
+    height: 430px;
+  }
+
+  #dempseyPopup {
+    height: 440px;
+  }
+
+  #taylorPopup,
+  #parkingRampPopup,
+  #blackhawkPopup {
+    height: 445px;
+  }
+
+  #acPopup,
+  #reevePopup {
+    height: 450px;
+  }
+
+  #successPopup {
+    height: 490px;
+  }
+
+  #horizonPopup {
+    height: 515px;
+  }
+
+  /*popup stuff continued*/
+
+
+  .popupText {
+    float: right;
+    width: 300px;
+    color: black;
+  }
+
+  h1.text.yellow {
+    margin: 0px;
+  }
+
+  #parkingRampParkingImage {
+    width: 715px;
+    padding: 10px;
+
+  }
+
+  #parkingRampParkingImage img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  a.address {
+    position: relative;
+    left: 40%;
+  }
+
+  /*mobile message*/
+  #mobile {
+    display: none;
+  }
+
+  /*for hall info popups*/
+  .closeButton {
+    float: right;
+    right: 15px;
+    top: 15px;
+  }
+
+
+
+  /*end brace for min-width 1025 (web)*/
+}
+
+/**/
+/*END WEB STYLING*/
+/**/
+
+
+/**/
+/*START MOBILE STYLING*/
+/**/
+@media screen and (max-width: 1024px) {
+  #mobileHeader {
+    background-color: #ffcc00;
+  }
+
+  /*drawer right */
+  .mdl-layout__drawer-right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 380px;
+    height: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    box-sizing: border-box;
+    border-right: 1px solid #e0e0e0;
+    background: #fafafa;
+    -webkit-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    color: #424242;
+    overflow: visible;
+    overflow-y: auto;
+    z-index: 5;
+  }
+
+  /*when menu is open*/
+  .active {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    right: 0px !important;
+  }
+
+  #menu {
+    overflow: hidden;
+  }
+
+  #menuDrawer {
+    width: 100%;
+    height: 70px;
+    z-index: 4;
+  }
+
+  .mdl-layout__header-row {
+    height: 45px;
+    padding: 0px;
+    margin: 0;
+  }
+
+  #watermark {
+    height: 54.5px;
+    width: auto;
+    position: relative;
+    top: -8%;
+  }
+
+  #watermarkLink {
+    position: relative;
+    top: -8%;
+  }
+
+  #headerWeb {
+    height: 70px;
+  }
+
+  #mobileHeader {
+    border-top: 5px solid white;
+    height: 70px;
+    width: 100%;
+  }
+
+  #mobileSearch {
+    padding: 0px;
+    position: relative;
+    float: right;
+    top: -40px;
+    left: -3%;
+    height: 0px;
+    max-width: 100px;
+  }
+
+  #mobileSearch>div>label {
+    padding-right: 10px;
+    float: right;
+    top: -35px;
+  }
+
+  #mobileSearch>label {
+    top: 0px;
+  }
+
+  .mobileSearchOpen {
+    left: -14% !important;
+  }
+
+  #searchInput {
+    visibility: visible;
+    width: 50px;
+    /* visibility: hidden; */
+  }
+
+  #searchResults {
+    max-height: 200px;
+    z-index: 10;
+    width: 120px;
+    margin: 0px;
+    background-color: #ffcc00;
+    padding: 10px;
+    position: relative;
+    top: 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    visibility: hidden;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  #searchResults>ul {
+    background-color: #ffcc00;
+    width: 120px;
+  }
+
+
+  .results {
+    word-wrap: break-word;
+  }
+
+  #notif {
+    position: relative;
+    left: 90%;
+    top: -35px;
+  }
+
+  #drawerContents {
+    width: 380px;
+    /*must be auto otherwise the scrollbar doesn't work*/
+    height: auto;
+    float: right;
+    top: 70px;
+    bottom: 0px;
+    right: -50%;
+    overflow-x: hidden;
+    z-index: 99;
+  }
+
+
+  /*all layout titles*/
+  .mdl-layout-title {
+    padding-left: 15px;
+  }
+
+  #selectAllOne {
+    position: relative;
+  }
+
+  #selectAllTwo {
+    position: relative;
+  }
+
+  /*forcing no padding on navigation*/
+  .mdl-navigation.mine {
+    width: 100%;
+  }
+
+  .linkSpan {
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+  }
+
+  /*pullout card under menu*/
+  .demo-card-wide {
+    width: 100%;
+    top: 70px !important;
+    transition: top .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+
+  .cardOpen {
+    /*-webkit-transition-duration: .2s;
+      transition-duration: .2s;
+      -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      -webkit-transition-property: -webkit-transform;
+      transition-property: transform;*/
+    z-index: 2 !important;
+    /*curve for slide out/in*/
+
+  }
+
+  .cardClosed {
+    z-index: 0;
+
+    top: -100%;
+  }
+
+  .cardCloseButton {
+    left: 90%;
+  }
+
+  /*for hall info popups*/
+  .closeButton {
+    float: right;
+    /* top: 20px; */
+    right: 3%;
+    position: absolute;
+    margin: 5px;
+    z-index: 99;
+  }
+
+
+  #mainWeb {
+    position: relative;
+  }
+
+  /*moves the google logo n' stuff into view on the map*/
+
+  #map>div>div>div:nth-child(2) {
+    margin-left: 60% !important;
+  }
+
+  /*map+satellite buttons*/
+  #map>div>div>div:nth-child(4)>div>div:nth-child(1) {
+    width: 120px !important;
+  }
+
+  /*map data copyright Google */
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 60% !important;
+    padding-right: 10px !important;
+  }
+
+  /*terms of use*/
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    width: 70px !important;
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 75% !important;
+    padding-right: 10px !important;
+  }
+
+  /*google logo*/
+  #map>div>div>div:nth-child(2) {
+    position: fixed !important;
+    bottom: 1% !important;
+    left: -59% !important;
+  }
+
+  /*street view dude + zoom in and out*/
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 15% !important;
+  }
+
+  /*street view back arrow*/
+  #map>div>div:nth-child(2)>div:nth-child(9) {
+    top: 70px !important;
+  }
+
+  /*street view description of location*/
+  #map>div>div:nth-child(2)>div:nth-child(10) {
+    top: 70px !important;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  #accFCard {
+    width: 100%;
+  }
+
+  #accFClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #accFCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  /*text*/
+  .categoryText {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #athCard {
+    width: 100%;
+  }
+
+  #athClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #athCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  #accSCard {
+    width: 100%;
+  }
+
+  #accSClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #accSCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  #campSCard {
+    width: 100%;
+  }
+
+  #campSClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #campSCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  #resHCard {
+    width: 100%;
+  }
+
+  #resHClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #resHCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  #diningCard {
+    width: 100%;
+  }
+
+  #diningClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #diningCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  #stuRCard {
+    width: 100%;
+  }
+
+  #stuRClose {
+    float: right;
+    position: relative;
+    top: 2%;
+    right: 2%;
+  }
+
+  /*iframe video*/
+  #stuRCard>div:nth-child(3) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  /*popup css*/
+  .generalHover {
+    height: 80px;
+    width: 160px;
+  }
+
+  #equityHover,
+  #recreationHover {
+    width: 185px;
+  }
+
+  #equityHover h1.headHover,
+  #recreationHover h1.headHover {
+    width: 180px;
+  }
+
+  #alumniHover {
+    width: 195px;
+  }
+
+  #alumniHover h1.headHover {
+    width: 190px;
+  }
+
+  #environmentalHover {
+    height: 100px;
+  }
+
+  .imageHover {
+    display: none;
+  }
+
+  .hoverDiv {
+    height: 50px;
+    width: 150px;
+    padding: 4px;
+
+  }
+
+  h1.headHover {
+
+    color: black;
+    font-size: 10px;
+
+  }
+
+  p.paraHover {
+
+    font-size: 10px;
+    width: 145px;
+  }
+
+  .hoverLink {
+    font-size: 10px;
+  }
+
+  .hoverBreak {
+    display: none;
+  }
+
+  .parkingHover {
+    height: 60px;
+  }
+
+  .commuterHover {
+    height: 110px;
+  }
+
+  #twentythreeHover {
+    height: 160px;
+  }
+
+  #thirtynineHover {
+    height: 140px;
+  }
+
+  #sevenHover {
+    height: 130px;
+    width: 120px;
+  }
+
+  #womensCenterHover {
+    height: 70px;
+  }
+
+  h1.parkingHeadHover {
+    font-size: 10px;
+    color: black;
+  }
+
+  .parkingColorStaff {
+    top: -10px;
+
+  }
+
+  .parkingColorRemote {
+    top: -10px;
+
+  }
+
+  .parkingColorCommute {
+    top: -10px;
+  }
+
+  .parkingColorRestricted {
+    top: -10px;
+  }
+
+  .parkingColorReserved {
+    top: -10px;
+  }
+
+  .parkingColorCommuter {
+    top: -10px;
+  }
+
+  .parkingColorResident {
+    top: -10px;
+  }
+
+  .parkingColorVisitor {
+    top: -10px;
+  }
+
+
+
+  .popup {
+    position: absolute;
+    /*top: 60px;*/
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    color: black;
+    z-index: 5;
+  }
+
+  .popupBlack {
+    width: 100%;
+
+  }
+
+  h1.text.yellow {
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    top: 20px;
+    margin: 0px;
+    padding: 20px;
+  }
+
+  .popupNav {
+    width: 100%;
+  }
+
+  ul#popupNav {
+    text-align: center;
+  }
+
+  ul#popupNav li {
+    padding-left: 40px;
+    text-align: center;
+  }
+
+  ul#popupNav li.about {
+    padding-left: 20px;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
+
+  #vrCloseButton {
+    color: black;
+    top: 5px;
+    font-size: 24px;
+    left: 90%;
+
+  }
+
+  .infoContainer {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+    overflow-x: hidden;
+  }
+
+  .imagePopup {
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+  .imagePopup img {
+
+    display: block;
+    margin: 0 auto;
+  }
+
+  .videoPopup {
+    display: block;
+    margin: 0 auto;
+
+  }
+
+  .address {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+
+  .videoPopup iframe {
+
+    padding-top: 10px;
+  }
+
+  .tourText {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .subText {
+    margin-top: 10px;
+  }
+
+  /*end brace for media max-width 1024 (mobile)*/
+}
+
+/*vr portrait*/
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .vrDiv {
+    display: none;
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    height: 347px;
+    width: 100%;
+
+  }
+
+  /*styling google vr*/
+  .vr {
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 100% !important;
+    height: 347px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+
+  /*vr landscape */
+  .vrDiv {
+    display: none;
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+  }
+
+  /*styling google vr*/
+  .vr {
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 100% !important;
+    height: calc(100% - 70px);
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 920px) {
+  .vrDiv {
+    display: none;
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    height: 347px;
+    width: 100%;
+
+  }
+
+  /*styling google vr*/
+  .vr {
+    visibility: hidden;
+    z-index: 3;
+    position: absolute;
+    width: 100% !important;
+    height: 347px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #drawerContents {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 60% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 59% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 56% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 48% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 36% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 35% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 25% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 22% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 22% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 20% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 5% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #map>div>div>div:nth-child(4) {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 2% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 75% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 75% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 74% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 68% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 60% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 60% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 55% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 45% !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #map>div>div>div.gmnoprint.gm-style-cc {
+    position: fixed !important;
+    bottom: 2% !important;
+    left: 41% !important;
+    padding-right: 10px !important;
+  }
+}
+
+/*google logo*/
+@media screen and (max-width: 375px) {
+  #map>div>div>div:nth-child(2) {
+    position: fixed !important;
+    bottom: 4% !important;
+    left: -59% !important;
+  }
+}
+
+/*street view dude + zoom in and out*/
+@media screen and (max-height: 750px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 15% !important;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 17% !important;
+  }
+}
+
+@media screen and (max-height: 650px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 18% !important;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 20% !important;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 21% !important;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 22% !important;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 26% !important;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 28% !important;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 30% !important;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  #map>div>div>div.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+    position: fixed !important;
+    bottom: 35% !important;
+  }
+}
+
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+  #accFCard {
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #athCard {
+    overflow-y: scroll;
+  }
+}
+
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+  #accSCard {
+    overflow-y: scroll;
+  }
+}
+
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+  #campSCard {
+    overflow-y: scroll;
+  }
+}
+
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+  #resHCard {
+    overflow-y: scroll;
+  }
+}
+
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+  #diningCard {
+    overflow-y: scroll;
+  }
+}
+
+/*when window shrinks under a certain size the category page becomes scrollable*/
+@media screen and (max-width: 400px) {
+  #stuRCard {
+    overflow-y: scroll;
+  }
+}
+
+/*popup styling under 500px width*/
+@media screen and (max-width: 500px) {
+  ul#popupNav {
+    text-align: left;
+  }
+
+  ul#popupNav li {
+    text-align: left;
+  }
+
+  .popupText {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .address {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .infoContainer {
+    height: 120%;
+  }
+
+  .infoContainer>a {
+    marigin: 0 auto;
+  }
+}
+
+/*scrolling issue for popups*/
+@media screen and (max-width: 500px) {
+  .five {
+    height: 60px;
+    background-color: #ffcc00;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .four {
+    height: 60px;
+    background-color: #ffcc00;
+  }
+}
